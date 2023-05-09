@@ -1,0 +1,16 @@
+.gradient {
+  position: absolute;
+  height: 160px;
+  left: 100%;
+  right: -100%;
+  top: 160px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(253, 254, 255, 0) 25%,
+    rgba(102, 149, 175, 0.5346) 75%,
+    rgba(102, 149, 175, 0.9) 100%
+  );
+  opacity: 0.25;
+  transform: rotate(-180deg);
+}
