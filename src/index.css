@@ -1,3 +1,10 @@
 * {
-    font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 368px;
+  height: 792px;
 }

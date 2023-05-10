@@ -1,27 +1,59 @@
-button {
+main {
+  position: relative;
+  height: 100vh;
+}
+.contenedorLogo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 10em;
+}
+.audnLogo {
+  width: 14em;
+  height: 4.5em;
+}
+.slogan {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #26262e;
+  margin: 1em;
+}
+.botones {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.boton {
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px 16px;
   gap: 12px;
   width: 320px;
   height: 48px;
+  border: 2px solid;
   border-radius: 0px 16px;
-  
-  /* position: absolute;
-  left: 16px;
-  top: 16px; */
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background-color: transparent;
+  margin: 8px;
 }
-
 .registrarse {
   background: #ff8e0a;
-  color: #FDFEFF;
-  /* position: absolute;
-  left: 16px;
-  top: 16px; */
+  color: #fdfeff;
+  border: none;
 }
-
-.contGoogle {
-    background-color: transparent;
+.iniciarSesion {
+  border: none;
 }
