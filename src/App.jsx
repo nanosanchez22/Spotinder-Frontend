@@ -15,6 +15,7 @@ function App() {
       <ContenidoPrincipal></ContenidoPrincipal>
         <BarraNavegacion />
     </Router>
+
   );
 };
 
