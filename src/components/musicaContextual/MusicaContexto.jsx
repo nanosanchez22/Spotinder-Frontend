@@ -1,7 +1,7 @@
 import "./MusicaContexto.css";
-import { InputSeleccionar } from "./InputSeleccionar";
-import { Generos } from "./Generos";
-export function MusicaContexto() {
+import { InputSeleccionar } from "./inputSeleccionar";
+import { Generos } from "./generos";
+function MusicaContexto() {
   return (
     <main className="mainMusicaContexto">
       <div className="top">
@@ -37,3 +37,4 @@ export function MusicaContexto() {
     </main>
   );
 }
+export default MusicaContexto;

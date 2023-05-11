@@ -1,12 +1,14 @@
 import "./App.css";
-import React from "react";
-import { MusicaContexto } from "./components/musicaContextual/MusicaContexto";
+import BarraNavegacion from "./components/barraNavegacion/BarraNavegacion";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ContenidoPrincipal from "./routes/ContenidoPrincipal";
 
 function App() {
   return (
-    <>
-      <MusicaContexto />
-    </>
+    <Router>
+      <ContenidoPrincipal></ContenidoPrincipal>
+      <BarraNavegacion />
+    </Router>
   );
 }
 

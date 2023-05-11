@@ -1,6 +1,7 @@
 import "./Perfil.css";
 import { Playlist } from "./Playlist";
-export const Perfil = () => {
+
+function Perfil() {
   return (
     <>
       <div className="fotoPerfil"></div>
@@ -28,3 +29,5 @@ export const Perfil = () => {
     </>
   );
 };
+export default Perfil;
+
