@@ -1,6 +1,7 @@
 import React from "react";
 import "./Perfil.css";
-export function Perfil() {
+
+function Perfil() {
   return (
     <div className="pantalla">
       <div className="gradient"></div>
@@ -8,3 +9,5 @@ export function Perfil() {
     </div>
   );
 }
+
+export default Perfil;

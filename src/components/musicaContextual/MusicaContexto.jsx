@@ -2,7 +2,7 @@ import React from "react";
 import "./MusicaContexto.css";
 import { InputSeleccionar } from "./inputSeleccionar";
 import { Generos } from "./generos";
-export function MusicaContexto() {
+function MusicaContexto() {
   return (
     <main className="mainContenedor">
       <div className="top">
@@ -52,3 +52,4 @@ export function MusicaContexto() {
     </main>
   );
 }
+export default MusicaContexto;
