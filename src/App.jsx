@@ -1,10 +1,11 @@
 import "./App.css";
-import Registro from "./components/registro/Registro";
+import React from "react";
+import { MusicaContexto } from "./components/musicaContextual/MusicaContexto";
 
 function App() {
   return (
     <>
-      <Registro />
+      <MusicaContexto />
     </>
   );
 }
