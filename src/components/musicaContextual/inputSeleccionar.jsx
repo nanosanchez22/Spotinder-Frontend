@@ -1,3 +1,4 @@
+import "./inputSeleccionar.css";
 export const InputSeleccionar = ({
   titulo,
   opcion1,
@@ -12,9 +13,9 @@ export const InputSeleccionar = ({
   opcion10,
 }) => {
   return (
-    <div>
-      <p3 className="titulo">{titulo}</p3>
-      <select className="selector">
+    <>
+      <p3 className="inputSelector_Titulo">{titulo}</p3>
+      <select className="inputSelector_Selector">
         <option>{opcion1}</option>
         <option>{opcion2}</option>
         <option>{opcion3}</option>
@@ -26,6 +27,6 @@ export const InputSeleccionar = ({
         <option>{opcion9}</option>
         <option>{opcion10}</option>
       </select>
-    </div>
+    </>
   );
 };

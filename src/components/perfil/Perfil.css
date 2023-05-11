@@ -1,16 +1,138 @@
-.gradient {
+.fotoPerfil {
   position: absolute;
-  height: 160px;
-  left: 100%;
-  right: -100%;
-  top: 160px;
+  width: 152px;
+  height: 152px;
+  left: 108px;
+  top: 48px;
+  background: url("/public/imagenes/brand_eyewear.jpg");
+  background-size: cover;
+  filter: drop-shadow(0px 0px 8px rgba(8, 8, 17, 0.08))
+    drop-shadow(4px 2px 12px rgba(8, 8, 17, 0.08));
+  border-radius: 92px;
+}
 
-  background: linear-gradient(
-    180deg,
-    rgba(253, 254, 255, 0) 25%,
-    rgba(102, 149, 175, 0.5346) 75%,
-    rgba(102, 149, 175, 0.9) 100%
-  );
-  opacity: 0.25;
-  transform: rotate(-180deg);
+.config {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  border: transparent;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 288px;
+  top: 56px;
+  background: #fdfeff;
+  border-radius: 24px;
+}
+
+.configSVG {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: calc(50% - 22px / 2);
+  top: calc(50% - 22px / 2);
+}
+.nombre {
+  position: absolute;
+  width: 320px;
+  height: 36px;
+  left: 24px;
+  top: 216px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #26262e;
+}
+
+.usuario {
+  position: absolute;
+  width: 320px;
+  height: 21px;
+  left: 24px;
+  top: 256px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #26262e;
+}
+.divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 320px;
+  height: 26px;
+  left: 24px;
+  top: 304px;
+}
+
+.dividerText {
+  width: 101px;
+  height: 24px;
+
+  /* Headings/Heading 5 - 16px/Medium */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+
+  /* identical to box height, or 150% */
+  letter-spacing: 0.5px;
+
+  /* Medios Tonos/Gris 5 */
+  color: #26262e;
+}
+
+.dividerSVG {
+  width: 87px;
+  height: 0px;
+  border: 2px solid #e4e6e8;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.dividerBoton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+
+  width: 100px;
+  height: 26px;
+  background: #ff8e0a;
+  border-radius: 0px 8px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.divPlaylists {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  width: 320px;
+  height: 204px;
+  left: 24px;
+  top: 352px;
+  overflow-y: scroll;
 }
