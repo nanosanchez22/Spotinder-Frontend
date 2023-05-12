@@ -22,7 +22,7 @@ function BarraNavegacion() {
       <nav className="nav-bar">
         <Link
           className={`botonNavBar ${botonActivo === "inicio" ? "activo" : ""}`}
-          to="/"
+          to="/home"
           onClick={() => cambiarBotonActivo("inicio")}
         >
           <img
