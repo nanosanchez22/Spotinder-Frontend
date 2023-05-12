@@ -4,17 +4,22 @@ import EyeClosed from "/iconos/stateClosed.svg";
 import EyeOpen from "/iconos/stateOpen.svg";
 import Checkbox from "/iconos/checkbox.svg";
 import CheckboxChecked from "/iconos/checkbox-checked.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NombreContr() {
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+
   const [showPassword, setShowPassword] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
+    localStorage.getItem;
   };
 
   const handlePassword = (e) => {
@@ -31,6 +36,44 @@ function NombreContr() {
     setPasswordFocused(false);
   };
 
+  const registrar = async (event) => {
+    event.preventDefault();
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      nombre: name,
+      usuario: name,
+      email: localStorage.getItem("mail"),
+      contraseña: password,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/registrar",
+        requestOptions
+      );
+      if (response.ok) {
+        const respuesta = await response.json();
+        alert("El usuario ha sido registrado.");
+        navigate("/inicio");
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <>
       <h1 className="pregunta">Ingresa un nombre de usuario y contraseña.</h1>
@@ -38,7 +81,15 @@ function NombreContr() {
         <label htmlFor="name" className="labelsNC">
           Nombre de usuario:
         </label>
-        <input type="text" name="name" className="inputsNC" />
+        <input
+          value={name}
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+          type="text"
+          name="name"
+          className="inputsNC"
+        />
 
         <label
           htmlFor="password"
@@ -52,7 +103,10 @@ function NombreContr() {
           <input
             type={showPassword ? "text" : "password"}
             value={password}
-            onChange={handlePassword}
+            onChange={(event) => {
+              setPassword(event.target.value);
+              handlePassword;
+            }}
             onFocus={() => setPasswordFocused(true)}
             onBlur={() => setPasswordFocused(false)}
             name="password"
@@ -107,9 +161,10 @@ function NombreContr() {
             </a>
           </label>
         </div>
-        <Link to="../../inicio">
-          <button className="continuar">Continuar </button>
-        </Link>
+
+        <button onClick={registrar} className="continuar">
+          Continuar{" "}
+        </button>
       </form>
     </>
   );
