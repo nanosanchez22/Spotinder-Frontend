@@ -1,6 +1,6 @@
 import "./App.css";
 import BarraNavegacion from "./components/barraNavegacion/BarraNavegacion";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import ContenidoPrincipal from "./routes/ContenidoPrincipal";
 
 function App() {
