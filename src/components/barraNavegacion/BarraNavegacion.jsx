@@ -31,10 +31,11 @@ function BarraNavegacion() {
           />
           <p className="pNavegacion">Inicio</p>
         </Link>
-        {/* <Link
+        <Link
             className={`botonNavBar ${
               botonActivo === "buscador" ? "activo" : ""
             }`}
+            to="/buscador"
             onClick={() => cambiarBotonActivo("buscador")}
           >
             <img
@@ -44,7 +45,7 @@ function BarraNavegacion() {
               alt="Botón de Búsqueda"
             />
             <p className="pNavegacion">Buscador</p>
-          </Link> */}
+          </Link>
         <Link
           className={`botonNavBar ${botonActivo === "perfil" ? "activo" : ""}`}
           to="/perfil"

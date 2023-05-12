@@ -13,6 +13,7 @@ import Home from "./components/home/Home.jsx";
 import Email from "./components/registro/email/Email.jsx";
 import NombreContr from "./components/registro/nombreContr/NombreContr.jsx";
 import Inicio from "./components/inicio/Inicio.jsx";
+import Buscador from "./components/buscador/Buscador.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, path: "/home", element: <Home /> },
       { path: "/perfil", element: <Perfil /> },
+      { path: "/buscador", element: <Buscador/> },
     ],
   },
   /*   { path: "/registro", element: <Registro /> },
