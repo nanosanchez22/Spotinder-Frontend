@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import "./App.css";
-import BarraNavegacion from "./components/barraNavegacion/BarraNavegacion";
-import Home from "./components/home/Home";
-import Inicio from "./components/inicio/Inicio";
-import { Outlet } from "react-router-dom";
-
-function App() {
-  return (
-    <>
-      <Outlet />
-      <BarraNavegacion></BarraNavegacion>
-    </>
-  );
-}
-
-export default App;
-=======
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -31,6 +13,12 @@ import Home from "./components/home/Home.jsx";
 import Email from "./components/registro/email/Email.jsx";
 import NombreContr from "./components/registro/nombreContr/NombreContr.jsx";
 import Inicio from "./components/inicio/Inicio.jsx";
+import Buscador from "./components/buscador/Buscador.jsx";
+import Login from "./components/login/Login.jsx";
+import RecuperarCuenta from "./components/login/recuperarCuenta/RecuperarCuenta.jsx";
+
+import CupidoMusical from "./components/cupidoMusical/CupidoMusical.jsx";
+import MusicaContextual from "./components/musicaContextual/MusicaContexto.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -39,6 +27,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, path: "/home", element: <Home /> },
       { path: "/perfil", element: <Perfil /> },
+      { path: "/buscador", element: <Buscador /> },
     ],
   },
   /*   { path: "/registro", element: <Registro /> },
@@ -52,6 +41,11 @@ const Router = createBrowserRouter([
     ],
   },
   { path: "inicio", element: <Inicio /> },
+  { path: "login", element: <Login /> },
+  { path: "recuperar", element: <RecuperarCuenta /> },
+
+  { path: "cupidoMusical", element: <CupidoMusical /> },
+  { path: "musicaContextual", element: <MusicaContextual /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -59,4 +53,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={Router} />
   </React.StrictMode>
 );
->>>>>>> 3683eeb8d16ee68a6d68e8aba7036870394426d4

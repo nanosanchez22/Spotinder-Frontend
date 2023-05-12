@@ -1,8 +1,8 @@
 .top {
   width: 320px;
   height: 40px;
-  top: 24px;
   text-align: center;
+  margin-top: 14px;
 }
 
 .top_Flecha {
@@ -11,6 +11,8 @@
   position: absolute;
   background-color: transparent;
   border: transparent;
+  margin-top: 5px;
+  left: 20px;
 }
 .top_Flecha_ImgFlecha {
   position: absolute;
@@ -20,11 +22,7 @@
   top: calc(50% - 16px / 2 + 1px);
 }
 
-.mainMusicaContexto div {
-  margin-top: 14px;
-}
-
-.crearPlaylist_boton {
+.crearPlaylist_Boton {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,7 +34,7 @@
   width: 320px;
   height: 48px;
   left: 24px;
-  top: 704px;
+  top: 580px;
   background: #e4e6e8;
   border-radius: 0px 16px;
 }
