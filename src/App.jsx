@@ -1,14 +1,15 @@
 import "./App.css";
 import BarraNavegacion from "./components/barraNavegacion/BarraNavegacion";
-import { BrowserRouter as Router } from "react-router-dom";
-import ContenidoPrincipal from "./routes/ContenidoPrincipal";
+import Home from "./components/home/Home";
+import Inicio from "./components/inicio/Inicio";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <ContenidoPrincipal></ContenidoPrincipal>
-      <BarraNavegacion />
-    </Router>
+    <>
+      <Outlet />
+      <BarraNavegacion></BarraNavegacion>
+    </>
   );
 }
 
