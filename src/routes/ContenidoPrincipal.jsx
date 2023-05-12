@@ -18,6 +18,7 @@ function ContenidoPrincipal() {
         <Perfil />
       </Route>
       {/* <Route path="/amigos" component={error} /> */}
+      
     </Switch>
   );
 }
