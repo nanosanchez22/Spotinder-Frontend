@@ -8,7 +8,7 @@ function MusicaContexto() {
         <button className="top_Flecha">
           <img
             className="top_Flecha_ImgFlecha"
-            src="/iconos/position=left-1.svg"
+            src="\iconos\positionLeft-1.svg"
             alt="icono de flecha"
           />
         </button>
