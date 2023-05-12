@@ -4,6 +4,7 @@ import EyeClosed from "/iconos/stateClosed.svg";
 import EyeOpen from "/iconos/stateOpen.svg";
 import Checkbox from "/iconos/checkbox.svg";
 import CheckboxChecked from "/iconos/checkbox-checked.svg";
+import { Link } from "react-router-dom";
 
 function NombreContr() {
   const [password, setPassword] = useState("");
@@ -41,7 +42,9 @@ function NombreContr() {
 
         <label
           htmlFor="password"
-          className={`labelsNC contr ${password.length > 0 ? (isPasswordValid ? "" : "invalid") : ""}`}
+          className={`labelsNC contr ${
+            password.length > 0 ? (isPasswordValid ? "" : "invalid") : ""
+          }`}
         >
           Contraseña:
         </label>
@@ -53,7 +56,11 @@ function NombreContr() {
             onFocus={() => setPasswordFocused(true)}
             onBlur={() => setPasswordFocused(false)}
             name="password"
-            className={`inputsNC ${!passwordFocused && !isPasswordValid && password.length > 0 ? "invalid" : ""}`}
+            className={`inputsNC ${
+              !passwordFocused && !isPasswordValid && password.length > 0
+                ? "invalid"
+                : ""
+            }`}
             minLength={8}
           />
           <img
@@ -63,7 +70,15 @@ function NombreContr() {
             className="ojo"
           />
         </div>
-        <p className={`mensajeC ${isPasswordValid === null ? "" : isPasswordValid ? "valid" : "invalid"}`}>
+        <p
+          className={`mensajeC ${
+            isPasswordValid === null
+              ? ""
+              : isPasswordValid
+              ? "valid"
+              : "invalid"
+          }`}
+        >
           Deberá contener al menos 8 caracteres.
         </p>
 
@@ -92,6 +107,9 @@ function NombreContr() {
             </a>
           </label>
         </div>
+        <Link to="../../inicio">
+          <button className="continuar">Continuar </button>
+        </Link>
       </form>
     </>
   );
