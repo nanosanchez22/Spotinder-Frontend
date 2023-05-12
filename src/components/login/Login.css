@@ -1,0 +1,44 @@
+.formIniciar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  position: absolute;
+  width: 320px;
+  height: 118px;
+  left: 24px;
+  top: 100px;
+}
+.iniciar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 12px;
+  border-radius: 0px 16px;
+  font-size: 16px;
+  color: white;
+  background: #ff8e0a;
+  position: absolute;
+  width: 320px;
+  height: 48px;
+  left: 22px;
+  top: 380px;
+  border: none;
+}
+.olvidaste {
+  width: 214px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #26262e;
+  position: absolute;
+  top: 470px;
+  text-decoration: none;
+}

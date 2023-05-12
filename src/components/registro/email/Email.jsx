@@ -1,5 +1,6 @@
 import React from "react";
-import "./Email.css"
+import "./Email.css";
+import { Link } from "react-router-dom";
 
 function Email() {
   return (
@@ -11,6 +12,9 @@ function Email() {
         </label>
         <input type="email" className="inputEmail" />
         <p className="mensajeEmail">Deberás poder confirmarlo luego.</p>
+        <Link to="../usuario">
+          <button className="continuar">Continuar </button>
+        </Link>
       </form>
     </>
   );

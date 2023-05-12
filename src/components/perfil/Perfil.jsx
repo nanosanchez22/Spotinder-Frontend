@@ -13,8 +13,8 @@ function Perfil() {
         />
       </button>
 
-      <p1 className="nombre">Cristiano Ronaldo</p1>
-      <p3 className="usuario">@CR7</p3>
+      <p className="nombre">Cristiano Ronaldo</p>
+      <p className="usuario">@CR7</p>
 
       <div className="divider">
         <p className="dividerText">Mis Playlists</p>
@@ -28,6 +28,5 @@ function Perfil() {
       </div>
     </>
   );
-};
+}
 export default Perfil;
-
