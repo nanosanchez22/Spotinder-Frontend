@@ -14,6 +14,11 @@ import Email from "./components/registro/email/Email.jsx";
 import NombreContr from "./components/registro/nombreContr/NombreContr.jsx";
 import Inicio from "./components/inicio/Inicio.jsx";
 import Buscador from "./components/buscador/Buscador.jsx";
+import Login from "./components/login/Login.jsx";
+import RecuperarCuenta from "./components/login/recuperarCuenta/RecuperarCuenta.jsx";
+
+import CupidoMusical from "./components/cupidoMusical/CupidoMusical.jsx";
+import MusicaContextual from "./components/musicaContextual/MusicaContexto.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -22,7 +27,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, path: "/home", element: <Home /> },
       { path: "/perfil", element: <Perfil /> },
-      { path: "/buscador", element: <Buscador/> },
+      { path: "/buscador", element: <Buscador /> },
     ],
   },
   /*   { path: "/registro", element: <Registro /> },
@@ -36,6 +41,11 @@ const Router = createBrowserRouter([
     ],
   },
   { path: "inicio", element: <Inicio /> },
+  { path: "login", element: <Login /> },
+  { path: "recuperar", element: <RecuperarCuenta /> },
+
+  { path: "cupidoMusical", element: <CupidoMusical /> },
+  { path: "musicaContextual", element: <MusicaContextual /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

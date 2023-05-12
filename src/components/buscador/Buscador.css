@@ -75,3 +75,11 @@ height: 24px;
 left: 24px;
 top: 175px;
 }
+.contenedorCard{
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
