@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router";
 import "./Perfil.css";
 import { Playlist } from "./Playlist";
 
 function Perfil() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="fotoPerfil"></div>
-      <button className="config">
+      <button onClick={() => navigate("/perfil/config")} className="config">
         <img
           className="configSVG"
           src="./iconos/style=outline, state=Default.svg"

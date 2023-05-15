@@ -1,0 +1,48 @@
+.imgCard{
+    width: 152px;
+    height: 152px;
+}
+.nombreCard{
+    /* Title placeholder */
+    width: 152px;
+    height: 18px;
+    /* Body/Body Very Small - 12px/Medium */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: 0.5px;
+    /* Medios Tonos/Gris 5 */
+    color: #26262E;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+.artistaCard{
+    /* Caption placeholder */
+    width: 152px;
+    height: 18px;
+    /* Body/Body Very Small - 12px/Regular */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: 0.5px;
+    /* Medios Tonos/Gris 3 */
+    color: #838486;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}

@@ -6,35 +6,25 @@ import NombreContr from "./nombreContr/NombreContr";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 function Registro() {
-  /*   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const email = () => {
-    navigate("/email");
+  const goBack = () => {
+    navigate(-1);
   };
-
-  const usuario = () => {
-    navigate("/usuario-contraseña");
-  }; */
 
   return (
     <div className="centrar">
       <div className="registro">
         <header className="headerCrearCuenta">
-          <Link to="../">
-            {" "}
-            <img
-              src={FlechaAtras}
-              alt="Ir hacia atras"
-              className="atras"
-            />{" "}
-          </Link>
+          <img
+            onClick={goBack}
+            src={FlechaAtras}
+            alt="Ir hacia atras"
+            className="atras"
+          />
           <p className="pHeader">Crear Cuenta</p>
         </header>
         <Outlet />
-        {/* <Email /> */}
-
-        {/* <Email/>
-        <NombreContr/> */}
       </div>
     </div>
   );

@@ -51,6 +51,5 @@ function CupidoMusical() {
       </button>
     </>
   );
-}
 
 export default CupidoMusical;
