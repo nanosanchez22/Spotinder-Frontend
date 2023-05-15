@@ -8,15 +8,33 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Buscador() {
   const navigate = useNavigate();
+
   const [searchValue, setSearchValue] = useState("");
+  const [cancion, setCancion] = useState([]);
 
-  const handleInputChange = (event) => {
-    setSearchValue(event.target.value);
+  const mostrarCanciones = async () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/canciones",
+        requestOptions
+      );
+      if (response.ok) {
+        const respuesta = await response.json();
+        setCancion(respuesta.canciones);
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
-  const handleClearClick = () => {
-    setSearchValue("");
-  };
   return (
     <div className="centrar">
       <div className="buscadorPage">
@@ -30,31 +48,21 @@ function Buscador() {
           placeholder="¿Qué deseas escuchar?"
           className="busquedaBar"
           value={searchValue}
-          onChange={handleInputChange}
           onClick={() => navigate("/buscador/buscarCancion")}
         />
         <img src={Lupa} alt="Buscar" className="iconoLupa" />
         {searchValue && (
-          <img
-            src={IconoBorrar}
-            alt="Borrar"
-            onClick={handleClearClick}
-            className="iconoBorrar"
-          />
+          <img src={IconoBorrar} alt="Borrar" className="iconoBorrar" />
         )}
         <div className="corte">
           <p className="top20">Top 20s</p>
           <hr />
         </div>
       </div>
-      <div className="contenedorCard">
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
-        <CancionCard></CancionCard>
+      <div className="contenedorCard" {...mostrarCanciones()}>
+        {cancion.map((cancion) => {
+          return <CancionCard canciones={cancion}></CancionCard>;
+        })}
       </div>
     </div>
   );

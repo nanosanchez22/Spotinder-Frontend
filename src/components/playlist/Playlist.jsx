@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Playlist.css";
 import FlechaAtras from "/iconos/positionLeft-1.svg";
 import TresPuntos from "/iconos/positionVertical.svg";
@@ -10,12 +10,44 @@ import Compartir from "/iconos/compartir.svg";
 import Mezclar from "/iconos/shuffle.svg";
 import BotonPlay from "/iconos/play-btn.svg";
 import ImagenPrueba from "/imagenes/brand_eyewear.jpg";
+import { useNavigate } from "react-router";
+import MiniCard from "../miniCard/MiniCard";
 
 function Playlist() {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
+
+  const [cancion, setCancion] = useState([]);
+
+  const mostrarCanciones = async () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/canciones",
+        requestOptions
+      );
+      if (response.ok) {
+        const respuesta = await response.json();
+        setCancion(respuesta.canciones);
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <div>
       <header className="playlist-cupido">
-        <img src={FlechaAtras} alt="" />
+        <img onClick={goBack} src={FlechaAtras} alt="" />
         <div className="contenedor-texto">
           <p className="generada">Generada del Cupido Musical</p>
           <h2 className="playlist-generada">Playlist Generada</h2>
@@ -42,95 +74,10 @@ function Playlist() {
         <img src={BotonPlay} alt="" />
       </div>
       <main className="playlist">
-        <div className="contenedor-miniCards">
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
-          <div className="mini-card">
-            <img src={ImagenPrueba} alt="" className="albumCover-small" />
-            <div className="texto-miniCard">
-              <h2 className="tituloCancion">Wish You Were Here</h2>
-              <p className="artista">Neck Deep</p>
-            </div>
-            <img src={TresPuntos} alt="" />
-          </div>
+        <div className="contenedor-miniCards" {...mostrarCanciones()}>
+          {cancion.map((cancion) => {
+            return <MiniCard canciones={cancion}></MiniCard>;
+          })}
         </div>
       </main>
     </div>

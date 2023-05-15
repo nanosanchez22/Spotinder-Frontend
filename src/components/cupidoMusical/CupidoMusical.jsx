@@ -3,9 +3,14 @@ import "./CupidoMusical.css";
 import Cruz from "/iconos/cruzSi.svg";
 import Corazon from "/iconos/corazon.svg";
 import Matches from "/iconos/matches.svg";
+import { useNavigate } from "react-router";
 import PopUpCupido from "../popUps/popUp-cupido/popUpCupido";
 
+
 function CupidoMusical() {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
   const [showPopup, setShowPopup] = useState(true);
 
   const closePopup = () => {
@@ -13,7 +18,7 @@ function CupidoMusical() {
   };
 
   return (
-    <>
+    <main className="cupidoContenedor">
     {showPopup && <PopUpCupido onClose={closePopup}/>}
     {showPopup && <div className="overlay"></div>}
       <div className="cupidoMusicalTop">
@@ -22,6 +27,7 @@ function CupidoMusical() {
         </section>
         <section className="cupidoMusicalFlecha">
           <img
+            onClick={goBack}
             className="img_cupidoMusicalFlecha"
             src="./iconos/positionLeft-1.svg"
             alt="flecha atras"
@@ -55,10 +61,13 @@ function CupidoMusical() {
         alt=""
       />
 
-      <button className="cardCupido_boton">
+      <button
+        onClick={() => navigate("/cupidoMusical/crearPlaylist")}
+        className="cardCupido_boton"
+      >
         <p className="cardCupido_botonTexto">Crear Playlist</p>
       </button>
-    </>
+    </main>
   );
 };
 export default CupidoMusical;

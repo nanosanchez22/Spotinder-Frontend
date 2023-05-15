@@ -21,6 +21,7 @@ import BuscadorCanciones from "./components/buscadorCanciones/BuscadorCanciones.
 import CupidoMusical from "./components/cupidoMusical/CupidoMusical.jsx";
 import MusicaContextual from "./components/musicaContextual/MusicaContexto.jsx";
 import Configuracion from "./components/perfil/configuracion/Configuracion.jsx";
+import Playlist from "./components/playlist/Playlist.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const Router = createBrowserRouter([
       { index: true, path: "/home", element: <Home /> },
       { path: "/perfil", element: <Perfil /> },
       { path: "/buscador", element: <Buscador /> },
+      { path: "/cupidoMusical/crearPlaylist", element: <Playlist /> },
     ],
   },
   {
@@ -44,11 +46,12 @@ const Router = createBrowserRouter([
   { path: "login", element: <Login /> },
   { path: "recuperar", element: <RecuperarCuenta /> },
 
-
-  { path: "musicaContextual", element: <MusicaContextual /> },
+  { path: "/musicaContextual", element: <MusicaContextual /> },
+  { path: "/cupidoMusical", element: <CupidoMusical /> },
   { path: "perfil/config", element: <Configuracion /> },
 
   { path: "/buscador/buscarCancion", element: <BuscadorCanciones /> },
+  /* { path: "/cupidoMusical/crearPlaylist", element: <Playlist /> }, */
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
