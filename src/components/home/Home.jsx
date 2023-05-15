@@ -67,7 +67,7 @@ function Home() {
         </header>
         <main className="contenedorBotones">
 
-<Link to="/cupidoMusical">
+<Link to="/cupidoMusical" className="link">
           <button className="botonMusicaYa">
             <img
               className="cupidoimg"
@@ -82,7 +82,7 @@ function Home() {
             </div>
           </button>
   </Link>
-<Link to="/musicaContextual">
+<Link to="/musicaContextual" className="link">
           <button className="botonMusicaYa">
             <img className="contextualimg" src={imagenesContextuales[currentImageM]} />
             <div className="textoMusicaYa">

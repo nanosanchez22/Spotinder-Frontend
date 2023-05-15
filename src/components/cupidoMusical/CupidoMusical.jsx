@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CupidoMusical.css";
 import Cruz from "/iconos/cruzSi.svg";
 import Corazon from "/iconos/corazon.svg";
 import Matches from "/iconos/matches.svg";
 import { useNavigate } from "react-router";
+import PopUpCupido from "../popUps/popUp-cupido/popUpCupido";
+
 
 function CupidoMusical() {
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
+  const [showPopup, setShowPopup] = useState(true);
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
+
   return (
     <main className="cupidoContenedor">
+    {showPopup && <PopUpCupido onClose={closePopup}/>}
+    {showPopup && <div className="overlay"></div>}
       <div className="cupidoMusicalTop">
         <section className="cupidoMusicalSection">
           <p className="cupidoMusicalTexto">Cupido Musical</p>
@@ -60,6 +69,5 @@ function CupidoMusical() {
       </button>
     </main>
   );
-}
-
+};
 export default CupidoMusical;

@@ -14,7 +14,7 @@ function Inicio() {
           <h1 className="slogan">Música a medida.</h1>
         </div>
         <div className="botones">
-          <Link to="/registro/email">
+          <Link className="link" to="/registro/email">
             <button className="boton registrarse">Registrarse Gratis</button>
           </Link>
           <button className="boton contGoogle">
@@ -23,7 +23,7 @@ function Inicio() {
           <button className="boton contApple">
             <img src={AppleLogo} alt="Apple Logo" /> Continuar con Apple
           </button>
-          <Link to="/login">
+          <Link className="link" to="/login">
             <button className="boton iniciarSesion">Iniciar Sesión</button>
           </Link>
         </div>
