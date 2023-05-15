@@ -32,8 +32,6 @@ const Router = createBrowserRouter([
       { path: "/buscador", element: <Buscador /> },
     ],
   },
-  /*   { path: "/registro", element: <Registro /> },
-  { path: "/usuario-contraseña", element: <NombreContr /> }, */
   {
     path: "/registro",
     element: <Registro />,
@@ -46,7 +44,7 @@ const Router = createBrowserRouter([
   { path: "login", element: <Login /> },
   { path: "recuperar", element: <RecuperarCuenta /> },
 
-  { path: "cupidoMusical", element: <CupidoMusical /> },
+
   { path: "musicaContextual", element: <MusicaContextual /> },
   { path: "perfil/config", element: <Configuracion /> },
 
