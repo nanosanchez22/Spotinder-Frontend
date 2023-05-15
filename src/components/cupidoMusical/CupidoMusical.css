@@ -43,140 +43,74 @@
   left: 0px;
   top: 8px;
 }
-.cardCupido_ImagenDerecha {
-  position: absolute;
-  visibility: hidden;
-  left: 79.62%;
-  right: -3.48%;
-  top: 30.64%;
-  bottom: 18.89%;
-  opacity: 0;
-  border-radius: 0px 48px;
-  transform: rotate(31.35deg);
-}
-
-.cardCupido_ImagenIzquierda {
-  position: absolute;
-  visibility: hidden;
-  left: 0%;
-  right: 76.13%;
-  top: 56.9%;
-  bottom: -7.37%;
-  opacity: 0;
-  border-radius: 0px 48px;
-  transform: rotate(-31.35deg);
-}
 .cardCupido_ImagenFrente {
   position: absolute;
-  left: 38.07%;
-  right: 38.06%;
-  top: 17.81%;
-  bottom: 31.71%;
-  background: url("/public/imagenes/brand_eyewear.jpg");
+  height: 272px;
+  width: 272px;
+  top: 96px;
+ /*  background: url("/public/imagenes/brand_eyewear.jpg"); */
   background-size: cover;
   filter: drop-shadow(0px 0px 8px rgba(8, 8, 17, 0.08))
     drop-shadow(8px 8px 16px rgba(8, 8, 17, 0.08));
   border-radius: 0px 48px;
 }
-.cardCupido_Imagen2 {
-  position: absolute;
-  left: 53%;
-  right: 29.1%;
-  top: 5.94%;
-  bottom: 56.21%;
-  background: url("/public/imagenes/brand_eyewear.jpg");
-  background-size: cover;
-  opacity: 0.5;
-  filter: drop-shadow(0px 0px 6px rgba(8, 8, 17, 0.08))
-    drop-shadow(6px 6px 12px rgba(8, 8, 17, 0.08));
-  border-radius: 0px 36px;
-  transform: rotate(10.45deg);
-}
-.cardCupido_Imagen3 {
-  position: absolute;
-  left: 66.11%;
-  right: 20.46%;
-  top: 0%;
-  bottom: 71.61%;
-  background: url("/public/imagenes/brand_eyewear.jpg");
-  opacity: 0;
-  filter: drop-shadow(0px 0px 4.50001px rgba(8, 8, 17, 0.08))
-    drop-shadow(4.50001px 4.50001px 9.00003px rgba(8, 8, 17, 0.08));
-  border-radius: 0px 27.0001px;
-  transform: matrix(0.93, 0.36, -0.36, 0.93, 0, 0);
-}
+
 .cardCupido_DivCorazon {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  position: absolute;
-  left: 43.16%;
-  right: 51.22%;
-  top: 62.35%;
-  bottom: 25.77%;
   background: #fdfeff;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 64px;
   box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04),
     1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
   border-radius: 32px;
 }
 .cardCupido_Corazon {
-  position: absolute;
-  width: 26.67px;
-  height: 24px;
+  width: 32px;
+  height: 30px;
   left: calc(50% - 26.67px / 2 - 0px);
   top: calc(50% - 24px / 2 - 0px);
 }
 .cardCupido_DivCruz {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0px;
-  position: absolute;
-  left: 51.23%;
-  right: 43.15%;
-  top: 62.35%;
-  bottom: 25.77%;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
   background: #fdfeff;
   box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04),
     1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
   border-radius: 32px;
 }
 .cardCupido_Cruz {
-  position: absolute;
-  width: 21.33px;
-  height: 21.33px;
+
+  width: 25px;
+  height: 25px;
   left: calc(50% - 21.33px / 2 - 0px);
   top: calc(50% - 21.33px / 2 - 0px);
 }
+.contenedorBotonesCard{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 30px;
+  top: 62.5%;
+  gap: 5rem;
+
+
+}
 .cardCupido {
   position: absolute;
-  width: 1139.7px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
   height: 538.9px;
-  left: -386px;
   top: 44px;
-}
-.cardCupido_NombreSi {
-  position: absolute;
-  visibility: hidden;
-  left: 3.68%;
-  right: 68.25%;
-  top: 78.68%;
-  bottom: 16.13%;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: 0.5px;
-  color: #26262e;
-  opacity: 0;
 }
 .cardCupido_Nombre {
   position: absolute;
-  left: 35.97%;
-  right: 35.96%;
   top: 78.68%;
   bottom: 16.13%;
   font-weight: 500;
@@ -185,20 +119,6 @@
   text-align: center;
   letter-spacing: 0.5px;
   color: #26262e;
-}
-.cardCupido_NombreNo {
-  position: absolute;
-  left: 68.25%;
-  right: 3.67%;
-  top: 78.68%;
-  bottom: 16.13%;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: 0.5px;
-  color: #26262e;
-  opacity: 0;
 }
 .pMatches {
   position: absolute;
