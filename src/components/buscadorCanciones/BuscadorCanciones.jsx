@@ -2,35 +2,61 @@ import React, { useState } from "react";
 import "./BuscadorCanciones.css";
 import FlechaAtras from "/iconos/positionLeft-1.svg";
 import Lupa from "/iconos/styleOutline_stateInactive-1.svg";
-import IconoBorrar from "/iconos/styleDefault_positionDiagonal.svg";
+import IconoBorrar from "/iconos/cruzSi.svg";
 import CancionCard from "../cancionCard/CancionCard";
 import { useNavigate } from "react-router";
+import MiniCard from "../miniCard/MiniCard";
 
 function Buscador() {
+  const [cancion, setCancion] = useState([]);
+
+  const [searchValue, setSearchValue] = useState("");
+  const filtrarCancion = cancion.filter(
+    (cancion) =>
+      cancion.nombre.toLowerCase().includes(searchValue.toLowerCase()) ||
+      cancion.artista.toLowerCase().includes(searchValue.toLowerCase()) ||
+      cancion.genero.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
-  };
-  const [searchValue, setSearchValue] = useState("");
-
-  const handleInputChange = (event) => {
-    setSearchValue(event.target.value);
   };
 
   const handleClearClick = () => {
     setSearchValue("");
   };
 
-  /*   var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  
-  fetch("http://localhost:8000/api/canciones", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error)); */
+  const mostrarCanciones = async () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/canciones",
+        requestOptions
+      );
+      if (response.ok) {
+        const respuesta = await response.json();
+        setCancion(respuesta.canciones);
+
+        /*  alert(respuesta.message); */
+      } else {
+        const respuesta = await response.json();
+        alert(respuesta.error);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  /*   fetch("http://localhost:8000/api/canciones", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+ */
   return (
     <div className="centrarB">
       <div className="buscadorPageB">
@@ -42,7 +68,8 @@ function Buscador() {
             placeholder="¿Qué deseas escuchar?"
             className="busquedaBarB"
             value={searchValue}
-            onChange={handleInputChange}
+            onChange={(e) => setSearchValue(e.target.value)}
+            onClick={mostrarCanciones}
           />
           <img
             src={FlechaAtras}
@@ -65,7 +92,9 @@ function Buscador() {
         </div>
       </div>
       <div className="contenedorCardB">
-        <CancionCard></CancionCard>
+        {filtrarCancion.map((cancion) => {
+          return <MiniCard canciones={cancion}></MiniCard>;
+        })}
       </div>
     </div>
   );

@@ -1,0 +1,36 @@
+.mini-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 320px;
+    height: 48px;
+  }
+  
+.albumCover-small {
+    width: 48px;
+  height: 48px;
+  }
+  .texto-miniCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tituloCancion {
+    width: 218px;
+  height: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  color: #26262E;
+  }
+  .artista {
+    width: 218px;
+  height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #838486;
+  }

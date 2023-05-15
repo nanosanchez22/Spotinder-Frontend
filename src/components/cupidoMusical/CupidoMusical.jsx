@@ -3,16 +3,22 @@ import "./CupidoMusical.css";
 import Cruz from "/iconos/cruzSi.svg";
 import Corazon from "/iconos/corazon.svg";
 import Matches from "/iconos/matches.svg";
+import { useNavigate } from "react-router";
 
 function CupidoMusical() {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
-    <>
+    <main className="cupidoContenedor">
       <div className="cupidoMusicalTop">
         <section className="cupidoMusicalSection">
           <p className="cupidoMusicalTexto">Cupido Musical</p>
         </section>
         <section className="cupidoMusicalFlecha">
           <img
+            onClick={goBack}
             className="img_cupidoMusicalFlecha"
             src="./iconos/positionLeft-1.svg"
             alt="flecha atras"
@@ -46,10 +52,14 @@ function CupidoMusical() {
         alt=""
       />
 
-      <button className="cardCupido_boton">
+      <button
+        onClick={() => navigate("/cupidoMusical/crearPlaylist")}
+        className="cardCupido_boton"
+      >
         <p className="cardCupido_botonTexto">Crear Playlist</p>
       </button>
-    </>
+    </main>
   );
+}
 
 export default CupidoMusical;

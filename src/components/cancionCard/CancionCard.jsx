@@ -1,12 +1,12 @@
 import React from "react";
 import "./CancionCard.css";
 
-function CancionCard() {
+function CancionCard(props) {
   return (
     <div>
-      <img className="imgCard" src="\imagenes\brand_eyewear.jpg" alt="" />
-      <p className="nombreCard">Nombre de cancion</p>
-      <p className="artistaCard">Nombre de artista</p>
+      <img className="imgCard" src={props.canciones.img} alt="" />
+      <p className="nombreCard">{props.canciones.nombre}</p>
+      <p className="artistaCard">{props.canciones.artista}</p>
     </div>
   );
 }
