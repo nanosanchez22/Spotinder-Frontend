@@ -16,9 +16,11 @@ import Inicio from "./components/inicio/Inicio.jsx";
 import Buscador from "./components/buscador/Buscador.jsx";
 import Login from "./components/login/Login.jsx";
 import RecuperarCuenta from "./components/login/recuperarCuenta/RecuperarCuenta.jsx";
+import BuscadorCanciones from "./components/buscadorCanciones/BuscadorCanciones.jsx";
 
 import CupidoMusical from "./components/cupidoMusical/CupidoMusical.jsx";
 import MusicaContextual from "./components/musicaContextual/MusicaContexto.jsx";
+import Configuracion from "./components/perfil/configuracion/Configuracion.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -46,6 +48,9 @@ const Router = createBrowserRouter([
 
   { path: "cupidoMusical", element: <CupidoMusical /> },
   { path: "musicaContextual", element: <MusicaContextual /> },
+  { path: "perfil/config", element: <Configuracion /> },
+
+  { path: "/buscador/buscarCancion", element: <BuscadorCanciones /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
