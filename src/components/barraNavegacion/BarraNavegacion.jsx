@@ -46,7 +46,7 @@ function BarraNavegacion() {
             />
             <p className="pNavegacion">Buscador</p>
           </Link>
-        <Link
+        <Link 
           className={`botonNavBar ${botonActivo === "perfil" ? "activo" : ""}`}
           to="/perfil"
           onClick={() => cambiarBotonActivo("perfil")}
