@@ -1,9 +1,10 @@
 import "./MusicaContexto.css";
-import { InputSeleccionar } from "./inputSeleccionar";
-import { Generos } from "./generos";
 import { Link, useNavigate } from "react-router-dom";
 import PopUpContextual from "../popUps/popUp-contextual/popUpContextual";
 import { useState } from "react";
+
+import { Generos } from "./generos/generos";
+import { InputSeleccionar } from "./input/inputSeleccionar";
 
 function MusicaContexto() {
   const [showPopup, setShowPopup] = useState(true);
@@ -18,7 +19,7 @@ function MusicaContexto() {
 
   return (
     <main className="mainMusicaContexto">
-      {showPopup && <PopUpContextual onClose={closePopup}/>}
+      {showPopup && <PopUpContextual onClose={closePopup} />}
       {showPopup && <div className="overlay"></div>}
       <div className="top">
         <button onClick={goBack} className="top_Flecha">
@@ -29,7 +30,7 @@ function MusicaContexto() {
           />
         </button>
 
-        <p1 className="top_Titulo">Música Contextual</p1>
+        <p className="top_Titulo">Música Contextual</p>
       </div>
 
       <InputSeleccionar
@@ -45,6 +46,7 @@ function MusicaContexto() {
         opcion9="Relajación"
         opcion10="Viajando"
       />
+
       <InputSeleccionar titulo="¿Cómo te sientes?" opcion1="Estado de ánimo" />
       <InputSeleccionar titulo="¿Cómo esta el clima?" opcion1="Clima" />
       <Generos />

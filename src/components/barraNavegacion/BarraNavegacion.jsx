@@ -9,6 +9,7 @@ import PerfilActivo from "/iconos/styleFill_stateActive_add-friendFalse.svg";
 import PerfilInactivo from "/iconos/styleOutline_stateInactive_add-friendFalse.svg";
 import AmigosActivo from "/iconos/styleFill_stateActive-2.svg";
 import AmigosInactivo from "/iconos/styleOutline_stateInactive-2.svg";
+import Error404 from "../error404/Error404.jsx";
 
 function BarraNavegacion() {
   const [botonActivo, setBotonActivo] = useState("inicio");
@@ -57,7 +58,7 @@ function BarraNavegacion() {
           />
           <p className="pNavegacion">Perfil</p>
         </Link>
-        {/* <Link
+        <Link to="/error404"
             className={`botonNavBar ${
               botonActivo === "amigos" ? "activo" : ""
             }`}
@@ -68,7 +69,7 @@ function BarraNavegacion() {
               alt="Botón de Amigos"
             />
             <p className="pNavegacion">Amigos</p>
-          </Link> */}
+          </Link>
       </nav>
     </>
   );

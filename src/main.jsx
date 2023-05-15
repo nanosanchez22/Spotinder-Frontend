@@ -22,6 +22,7 @@ import CupidoMusical from "./components/cupidoMusical/CupidoMusical.jsx";
 import MusicaContextual from "./components/musicaContextual/MusicaContexto.jsx";
 import Configuracion from "./components/perfil/configuracion/Configuracion.jsx";
 import Playlist from "./components/playlist/Playlist.jsx";
+import Error404 from "./components/error404/Error404.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const Router = createBrowserRouter([
       { path: "/perfil", element: <Perfil /> },
       { path: "/buscador", element: <Buscador /> },
       { path: "/cupidoMusical/crearPlaylist", element: <Playlist /> },
+      { path: "/error404", element: <Error404/>},
     ],
   },
   {
