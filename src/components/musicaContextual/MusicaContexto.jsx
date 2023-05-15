@@ -2,15 +2,24 @@ import "./MusicaContexto.css";
 import { InputSeleccionar } from "./inputSeleccionar";
 import { Generos } from "./generos";
 import { Link, useNavigate } from "react-router-dom";
+import PopUpContextual from "../popUps/popUp-contextual/popUpContextual";
+import { useState } from "react";
 
 function MusicaContexto() {
+  const [showPopup, setShowPopup] = useState(true);
   const navigate = useNavigate();
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
   const goBack = () => {
     navigate(-1);
   };
 
   return (
     <main className="mainMusicaContexto">
+      {showPopup && <PopUpContextual onClose={closePopup}/>}
+      {showPopup && <div className="overlay"></div>}
       <div className="top">
         <button onClick={goBack} className="top_Flecha">
           <img

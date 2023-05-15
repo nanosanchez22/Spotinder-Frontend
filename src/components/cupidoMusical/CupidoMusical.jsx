@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CupidoMusical.css";
 import Cruz from "/iconos/cruzSi.svg";
 import Corazon from "/iconos/corazon.svg";
 import Matches from "/iconos/matches.svg";
+import PopUpCupido from "../popUps/popUp-cupido/popUpCupido";
 
 function CupidoMusical() {
+  const [showPopup, setShowPopup] = useState(true);
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <>
+    {showPopup && <PopUpCupido onClose={closePopup}/>}
+    {showPopup && <div className="overlay"></div>}
       <div className="cupidoMusicalTop">
         <section className="cupidoMusicalSection">
           <p className="cupidoMusicalTexto">Cupido Musical</p>
@@ -51,5 +60,5 @@ function CupidoMusical() {
       </button>
     </>
   );
-
+};
 export default CupidoMusical;
