@@ -14,6 +14,7 @@ import MusicaContextual3 from "/musicaContextual/musicaContextual-3.svg";
 import MusicaContextual4 from "/musicaContextual/musicaContextual-4.svg";
 import MusicaContextual5 from "/musicaContextual/musicaContextual-5.svg";
 import MusicaContextual6 from "/musicaContextual/musicaContextual-6.svg";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [currentImageC, setCurrentImageC] = useState(0);
@@ -65,6 +66,8 @@ function Home() {
           </div>
         </header>
         <main className="contenedorBotones">
+
+<Link to="/cupidoMusical">
           <button className="botonMusicaYa">
             <img
               className="cupidoimg"
@@ -78,6 +81,8 @@ function Home() {
               </p>
             </div>
           </button>
+  </Link>
+<Link to="/musicaContextual">
           <button className="botonMusicaYa">
             <img className="contextualimg" src={imagenesContextuales[currentImageM]} />
             <div className="textoMusicaYa">
@@ -87,6 +92,8 @@ function Home() {
               </p>
             </div>
           </button>
+</Link>
+
         </main>
       </div>
     </div>
