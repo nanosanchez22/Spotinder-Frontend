@@ -1,5 +1,6 @@
 import "./App.css";
 import BarraNavegacion from "./components/barraNavegacion/BarraNavegacion";
+import CupidoMusical from "./components/cupidoMusical/CupidoMusical";
 import Home from "./components/home/Home";
 import Inicio from "./components/inicio/Inicio";
 import { Outlet } from "react-router-dom";
