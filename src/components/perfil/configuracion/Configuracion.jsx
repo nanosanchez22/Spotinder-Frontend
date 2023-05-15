@@ -1,10 +1,21 @@
+import { useNavigate } from "react-router";
 import "./Configuracion.css";
 import FlechaAtras from "/iconos/positionLeft-1.svg";
 const Configuracion = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="configuracion">
       <header className="headerCrearCuenta">
-        <img src={FlechaAtras} alt="Ir hacia atras" className="atras" />
+        <img
+          onClick={goBack}
+          src={FlechaAtras}
+          alt="Ir hacia atras"
+          className="atras"
+        />
         <p className="pHeader">Configuración</p>
       </header>
       <button className="botonEditarA">
