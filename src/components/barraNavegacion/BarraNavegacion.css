@@ -34,10 +34,11 @@
   letter-spacing: 0.5px;
   margin: 1em;
   padding: 0;
+  text-decoration: none;
 }
-
 .pNavegacion {
   margin: 0;
   color: #26262e;
   opacity: 0.4;
 }
+
