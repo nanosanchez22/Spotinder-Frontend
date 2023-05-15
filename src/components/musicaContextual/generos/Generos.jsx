@@ -1,10 +1,10 @@
 import "./Generos.css";
 export const Generos = () => {
   return (
-    <>
-      <p3 className="generos_Titulo">Selecciona hasta 3 géneros:</p3>
+    <div className="contenedorGenero">
+      <p className="generos_Titulo">Selecciona hasta 3 géneros:</p>
       <div className="generos_Botones">
-        <div className="generos_Division">
+        <div className="generos_Division uno">
           <button>
             <p>Rock</p>
           </button>
@@ -21,7 +21,7 @@ export const Generos = () => {
             <p>Blues</p>
           </button>
         </div>
-        <div className="generos_Division">
+        <div className="generos_Division dos">
           <button>
             <p>Hip-Hop</p>
           </button>
@@ -39,7 +39,7 @@ export const Generos = () => {
           </button>
         </div>
 
-        <div className="generos_Division">
+        <div className="generos_Division tres">
           <button>
             <p>Clásico</p>
           </button>
@@ -54,7 +54,7 @@ export const Generos = () => {
           </button>
         </div>
 
-        <div className="generos_Division">
+        <div className="generos_Division cuatro">
           <button>
             <p>Electrónica</p>
           </button>
@@ -69,6 +69,6 @@ export const Generos = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
