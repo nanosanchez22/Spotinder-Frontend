@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Buscador.css";
 import FlechaAtras from "/iconos/positionLeft-1.svg";
 import Lupa from "/iconos/styleOutline_stateInactive-1.svg";
-import IconoBorrar from "/iconos/styleDefault_positionDiagonal.svg";
 
 function Buscador() {
   const [searchValue, setSearchValue] = useState("");
@@ -40,7 +39,8 @@ function Buscador() {
         )}
         <div className="corte">
           <p className="top20">Top 20s</p>
-          <hr /></div>
+          <hr />
+        </div>
       </div>
     </div>
   );
