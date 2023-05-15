@@ -5,37 +5,26 @@
   left: 24px;
   top: 24px;
 }
-
 .cupidoMusicalSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   position: absolute;
   width: 272px;
   height: 40px;
   left: 24px;
   top: 0px;
 }
-
 .cupidoMusicalTexto {
   width: 272px;
   height: 24px;
-
-  /* Headings/Heading 5 - 16px/Medium */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
-  /* identical to box height, or 150% */
   text-align: center;
   letter-spacing: 0.5px;
-
-  /* Medios Tonos/Gris 5 */
   color: #26262e;
   flex: none;
   order: 1;
@@ -49,7 +38,6 @@
   left: 0px;
   top: 8px;
 }
-
 .cardCupido_ImagenDerecha {
   position: absolute;
   visibility: hidden;
@@ -57,8 +45,6 @@
   right: -3.48%;
   top: 30.64%;
   bottom: 18.89%;
-
-  background: url("link");
   opacity: 0;
   border-radius: 0px 48px;
   transform: rotate(31.35deg);
@@ -71,36 +57,28 @@
   right: 76.13%;
   top: 56.9%;
   bottom: -7.37%;
-
-  background: url("link");
   opacity: 0;
   border-radius: 0px 48px;
   transform: rotate(-31.35deg);
 }
-
 .cardCupido_ImagenFrente {
   position: absolute;
   left: 38.07%;
   right: 38.06%;
   top: 17.81%;
   bottom: 31.71%;
-
   background: url("/public/imagenes/brand_eyewear.jpg");
   background-size: cover;
-
-  /* Sombra sobre Blanco/Grande +320px */
   filter: drop-shadow(0px 0px 8px rgba(8, 8, 17, 0.08))
     drop-shadow(8px 8px 16px rgba(8, 8, 17, 0.08));
   border-radius: 0px 48px;
 }
-
 .cardCupido_Imagen2 {
   position: absolute;
   left: 53%;
   right: 29.1%;
   top: 5.94%;
   bottom: 56.21%;
-
   background: url("/public/imagenes/brand_eyewear.jpg");
   background-size: cover;
   opacity: 0.5;
@@ -109,14 +87,12 @@
   border-radius: 0px 36px;
   transform: rotate(10.45deg);
 }
-
 .cardCupido_Imagen3 {
   position: absolute;
   left: 66.11%;
   right: 20.46%;
   top: 0%;
   bottom: 71.61%;
-
   background: url("/public/imagenes/brand_eyewear.jpg");
   opacity: 0;
   filter: drop-shadow(0px 0px 4.50001px rgba(8, 8, 17, 0.08))
@@ -124,27 +100,22 @@
   border-radius: 0px 27.0001px;
   transform: matrix(0.93, 0.36, -0.36, 0.93, 0, 0);
 }
-
 .cardCupido_DivCorazon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   position: absolute;
   left: 43.16%;
   right: 51.22%;
   top: 62.35%;
   bottom: 25.77%;
-
-  /* Blanco */
   background: #fdfeff;
   box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04),
     1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
   border-radius: 32px;
 }
-
 .cardCupido_Corazon {
   position: absolute;
   width: 26.67px;
@@ -152,27 +123,22 @@
   left: calc(50% - 26.67px / 2 - 0px);
   top: calc(50% - 24px / 2 - 0px);
 }
-
 .cardCupido_DivCruz {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   position: absolute;
   left: 51.23%;
   right: 43.15%;
   top: 62.35%;
   bottom: 25.77%;
-
-  /* Blanco */
   background: #fdfeff;
   box-shadow: 0px 0px 5.33333px rgba(8, 8, 17, 0.04),
     1.77778px 1.77778px 3.55556px rgba(8, 8, 17, 0.08);
   border-radius: 32px;
 }
-
 .cardCupido_Cruz {
   position: absolute;
   width: 21.33px;
@@ -180,7 +146,6 @@
   left: calc(50% - 21.33px / 2 - 0px);
   top: calc(50% - 21.33px / 2 - 0px);
 }
-
 .cardCupido {
   position: absolute;
   width: 1139.7px;
@@ -195,21 +160,12 @@
   right: 68.25%;
   top: 78.68%;
   bottom: 16.13%;
-
-  /* Headings/Heading 4 - 20px/Medium */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-
-  /* identical to box height, or 140% */
   text-align: center;
   letter-spacing: 0.5px;
-
-  /* Medios Tonos/Gris 5 */
   color: #26262e;
-
   opacity: 0;
 }
 .cardCupido_Nombre {
@@ -218,19 +174,11 @@
   right: 35.96%;
   top: 78.68%;
   bottom: 16.13%;
-
-  /* Headings/Heading 4 - 20px/Medium */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-
-  /* identical to box height, or 140% */
   text-align: center;
   letter-spacing: 0.5px;
-
-  /* Medios Tonos/Gris 5 */
   color: #26262e;
 }
 .cardCupido_NombreNo {
@@ -239,10 +187,6 @@
   right: 3.67%;
   top: 78.68%;
   bottom: 16.13%;
-
-  /* Headings/Heading 4 - 20px/Medium */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
@@ -251,26 +195,17 @@
   color: #26262e;
   opacity: 0;
 }
-
 .pMatches {
   position: absolute;
   left: 6.52%;
   right: 6.52%;
   top: 66.67%;
   bottom: 30.3%;
-
-  /* Body/Body Medium - 16px/Regular */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
-  /* identical to box height, or 150% */
   text-align: center;
   letter-spacing: 0.5px;
-
-  /* Medios Tonos/Gris 5 */
   color: #26262e;
 }
 .sectionMatches {
@@ -279,21 +214,15 @@
   justify-content: center;
   align-items: center;
   padding: 0px;
-
   position: absolute;
   width: 64px;
   height: 64px;
   left: 280px;
   top: 508px;
-
-  /* Blanco */
   background: #fdfeff;
-
-  /* Sombra sobre Blanco/Chico -60px */
   box-shadow: 0px 0px 6px rgba(8, 8, 17, 0.04), 2px 2px 4px rgba(8, 8, 17, 0.08);
   border-radius: 32px;
 }
-
 .imgMatches {
   display: flex;
   flex-direction: row;
@@ -301,32 +230,23 @@
   align-items: center;
   padding: 1.33333px;
   gap: 10.67px;
-
   width: 32px;
   height: 32px;
-
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
 }
-
 .imgArtista {
   position: absolute;
   width: 64px;
   height: 64px;
   left: 152px;
   top: 584px;
-
-  background: url(image.png);
   background-size: cover;
-
-  /* Sombra sobre Blanco/Chico -60px */
   filter: drop-shadow(0px 0px 6px rgba(8, 8, 17, 0.04))
     drop-shadow(2px 2px 4px rgba(8, 8, 17, 0.08));
   border-radius: 32px;
 }
-
 .cardCupido_boton {
   display: flex;
   flex-direction: row;
@@ -334,33 +254,30 @@
   align-items: center;
   padding: 12px 16px;
   gap: 12px;
-
   position: absolute;
   width: 320px;
   height: 48px;
   left: 24px;
   top: 680px;
-
-  /* Medios Tonos/Gris 1 */
   background: #e4e6e8;
   border-radius: 0px 16px;
 }
-
 .cardCupido_botonTexto {
   width: 110px;
   height: 24px;
-
-  /* Headings/Heading 5 - 16px/Medium */
-  font-family: "Rubik";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
-  /* identical to box height, or 150% */
   text-align: center;
   letter-spacing: 0.5px;
-
-  /* Blanco */
   color: #fdfeff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./BuscadorCanciones.css";
 import FlechaAtras from "/iconos/positionLeft-1.svg";
 import Lupa from "/iconos/styleOutline_stateInactive-1.svg";
-import IconoBorrar from "/iconos/styleDefault_positionDiagonal.svg";
+import IconoBorrar from "/iconos/cruzNegra.svg";
 import CancionCard from "../cancionCard/CancionCard";
 import { useNavigate } from "react-router";
 
