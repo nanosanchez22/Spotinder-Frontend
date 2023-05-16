@@ -63,6 +63,31 @@ function CupidoMusical() {
     );
   };
 
+  /* const crearPlaylist=()=>{
+
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoiZmVyX3NhbmNoZXoyMiIsImlkIjoxLCJpYXQiOjE2ODM2NDM1MTV9.VufddAMnb8fKn-RWWm2yMUBwq4NTsnHz-6NxIfYGWJY");
+    myHeaders.append("Content-Type", "application/json");
+    
+    var raw = JSON.stringify({
+      "nombre": "playlist1",
+    "descripcion": "Mi primera playlist"
+  });
+  
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+  
+  fetch("http://localhost:8000/api/playlists/agregar", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+  } */
+
   return (
     <main className="cupidoContenedor">
       {showPopup && <PopUpCupido onClose={closePopup} />}
@@ -84,7 +109,7 @@ function CupidoMusical() {
         <div className="cardCupido_ImagenFrente">
           <img
             src={cancion[currentIndex]?.img}
-            style={{ maxHeight: "272px", maxWidth: "272px" }}
+            style={{ height: "272px", width: "272px" }}
             alt=""
           />
         </div>
@@ -117,11 +142,7 @@ function CupidoMusical() {
       <section className="sectionMatches">
         <img className="imgMatches" src={Matches} alt="" />
       </section>
-      <img
-        className="imgArtista"
-        src="public\imagenes\brand_eyewear.jpg"
-        alt=""
-      />
+      <img className="imgArtista" src={cancion[currentIndex]?.img} alt="" />
 
       <button
         onClick={() => navigate("/cupidoMusical/crearPlaylist")}
@@ -131,6 +152,5 @@ function CupidoMusical() {
       </button>
     </main>
   );
-
 }
 export default CupidoMusical;

@@ -6,6 +6,7 @@ import {
   RouterProvider,
   createBrowserRouter,
   Navigate,
+  Outlet,
 } from "react-router-dom";
 import Registro from "./components/registro/Registro.jsx";
 import Perfil from "./components/perfil/Perfil.jsx";
@@ -33,7 +34,7 @@ const Router = createBrowserRouter([
       { path: "/perfil", element: <Perfil /> },
       { path: "/buscador", element: <Buscador /> },
       { path: "/cupidoMusical/crearPlaylist", element: <Playlist /> },
-      { path: "/error404", element: <Error404/>},
+      { path: "/error404", element: <Error404 /> },
     ],
   },
   {

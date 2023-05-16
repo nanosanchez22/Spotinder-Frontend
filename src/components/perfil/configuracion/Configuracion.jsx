@@ -4,6 +4,11 @@ import FlechaAtras from "/iconos/positionLeft-1.svg";
 const Configuracion = () => {
   const navigate = useNavigate();
 
+  const cerrarSesion = () => {
+    localStorage.removeItem("token");
+    navigate("/inicio");
+  };
+
   const goBack = () => {
     navigate(-1);
   };
@@ -26,7 +31,9 @@ const Configuracion = () => {
       </button>
 
       <p className="pVersion">Version V1.15.03</p>
-      <button className="botonCerrarSesion">Cerrar Sesión</button>
+      <button onClick={cerrarSesion} className="botonCerrarSesion">
+        Cerrar Sesión
+      </button>
     </div>
   );
 };
