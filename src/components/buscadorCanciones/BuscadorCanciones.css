@@ -17,7 +17,6 @@
   }
   .busquedaBarB {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 12px 3em;
@@ -27,19 +26,21 @@
     position: absolute;
     width: 320px;
     height: 48px;
-    left: 22px;
-    top: 10px;
+
+    top: 25px;
     border: 2px solid #bfc0c1;
-    position: relative;
+    position: relative; 
   }
   .iconoLupaB {
     position: absolute;
-    top: 10px;
-    left: 2.1em;
+    top: 36px;
+    left: 2.2em;
   }
   .iconoBorrarB {
     position: absolute;
-    top: 7.7em;
+    width: 22px;
+    height: 22px;
+    top: 40px;
     right: 2.5em;
   }
   input[type="search"]::-webkit-search-cancel-button {
@@ -62,7 +63,7 @@
   order: 1;
   flex-grow: 1;
   }
-  .corte {
+  .corteB {
     display: flex;
   flex-direction: row;
   justify-content: center;
@@ -73,7 +74,7 @@
   width: 320px;
   height: 24px;
   left: 24px;
-  top: 175px;
+  top: 120px;
   }
   .contenedorCardB{
     padding: 2rem;
@@ -85,4 +86,9 @@
     justify-content: flex-start;
     height: 550px;
     overflow-y: auto;
+  }
+  .enLineaB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

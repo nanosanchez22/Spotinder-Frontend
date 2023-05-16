@@ -113,3 +113,12 @@
 
   border-radius: 0px 16px;
 }
+
+.headerCrearCuenta{
+  display: flex;
+  position: absolute;
+  top: 20px;
+  padding-left: 16px;
+  gap: 10px;
+
+}
