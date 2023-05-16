@@ -32,7 +32,7 @@ function RecuperarCuenta() {
           </p>
         </form>
         <Link to="../inicio">
-          <button className="continuar">Continuar</button>
+          <button className="continuarRecuperar">Continuar</button>
         </Link>
       </div>
     </div>
